@@ -1,16 +1,15 @@
 import React from 'react';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import MainContent from './components/MainContent';
+import TodoItem from './TodoItem';
 
 function App(){
   return(
-    <div>
-      <Header />
-      <MainContent />
-      <Footer />
+    <div className = "todo-list">
+    <TodoItem />
+    <TodoItem />
+    <TodoItem />
     </div>
-  );
+    
+  )
 }
 
-export default App;  
+export default App
