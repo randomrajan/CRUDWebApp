@@ -1,15 +1,28 @@
 import React from 'react';
 import TodoItem from './TodoItem';
+import './style.css';
+import todosData from "./todosData"
+import { render } from '@testing-library/react';
 
-function App(){
-  return(
-    <div className = "todo-list">
-    <TodoItem />
-    <TodoItem />
-    <TodoItem />
-    </div>
-    
-  )
+
+class App extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      todos : todosData
+    }
+  }
+  
+  render() {
+    const todoItems = this.state.todos.map((item) => <TodoItem key={item.id} item = {item} />)
+    return(
+      <div className = "todo-list">
+      {todoItems}
+      </div>
+      
+    )
+  }
+  
 }
 
 export default App
