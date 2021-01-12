@@ -2,7 +2,6 @@ import React from 'react';
 import TodoItem from './TodoItem';
 import './style.css';
 import todosData from "./todosData"
-import { render } from '@testing-library/react';
 
 
 class App extends React.Component {
