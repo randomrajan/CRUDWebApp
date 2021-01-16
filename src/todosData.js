@@ -1,7 +1,7 @@
 const todosData = [
     {
         id: 1,
-        text: "Take out the trash",
+        text: "Make my bed in the morning",
         completed: true
     },
     {
@@ -11,17 +11,17 @@ const todosData = [
     },
     {
         id: 3,
-        text: "Clean gecko tank",
+        text: "Clean my yard",
         completed: false
     },
     {
         id: 4,
-        text: "Mow lawn",
+        text: "Fixing my washing machine",
         completed: true
     },
     {
         id: 5,
-        text: "Catch up on Arrested Development",
+        text: "Catch up with my old friend",
         completed: false
     }
 ]

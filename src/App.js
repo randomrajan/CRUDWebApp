@@ -5,15 +5,26 @@ import todosData from "./todosData"
 
 
 class App extends React.Component {
-  constructor() {
+  constructor() { 
     super()
     this.state = {
       todos : todosData
     }
+    this.handleChange = this.handleChange.bind(this)
   }
   
   handleChange(id){
-    console.log("checked", id)
+    this.setState(prevstate => {
+      const updatedTodos = prevstate.todos.map(todo => {
+        if(todo.id === id) {
+          todo.completed = !todo.completed
+        }
+        return todo   
+      })
+      return {
+        todos: updatedTodos
+      }
+    })
   }
 
   render() {
